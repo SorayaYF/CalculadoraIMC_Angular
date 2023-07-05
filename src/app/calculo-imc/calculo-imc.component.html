@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Formulário IMC</h1>
+    <label for="txtPeso">Peso: </label>
+    <input type="number" id="txtPeso" [(ngModel)]="peso">
+    <h2>{{peso}}</h2>
+    <label for="txtAltura">Altura: </label>
+    <input type="number" id="txtAltura" [(ngModel)]="altura">
+    <h2>{{altura}}</h2>
+    <button [disabled]="isButtonDisabled()" (click)="calcularIMC()" title="Preencha todos os campos com um valor válido, para habilitar o botão">{{ isButtonDisabled() ? 'Desabilitado' :
+        'Calcular IMC' }}</button>
+    <h2>{{imc}}</h2>
+</div>
