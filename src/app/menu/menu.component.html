@@ -1,0 +1,16 @@
+<div class="menu-container">
+    <button class="menu-button" (click)="toggleMenu()">Menu</button>
+
+    <div [ngClass]="{'container': true, 'show': showMenu}">
+        <a routerLink="/binding" routerLinkActive="link">Exemplo Bindings</a><br>
+        <a routerLink="/imc" routerLinkActive="link">Cálculo Imc</a><br>
+        <a routerLink="/ngClass" routerLinkActive="link">Ng Class</a><br>
+        <a routerLink="/ngFor" routerLinkActive="link">Ng For</a><br>
+        <a routerLink="/ngIf" routerLinkActive="link">Ng If</a><br>
+        <a routerLink="/ngModel" routerLinkActive="link">Ng Model</a><br>
+        <a routerLink="/ngStyle" routerLinkActive="link">Ng Style</a><br>
+        <a routerLink="/ngSwitch" routerLinkActive="link">Ng Switch</a><br>
+        <a routerLink="/pipes" routerLinkActive="link">Exemplo Pipes</a><br>
+        <a routerLink="/microondas" routerLinkActive="link">Microondas</a><br>
+    </div>
+</div>

@@ -23,9 +23,9 @@ export class ExemploBindingComponent {
 
   public urlImg(): string {
     if (this.n1 + this.n2 > 50) {
-      return "https://i.pinimg.com/originals/3a/93/9e/3a939ed5a67ea28b52771fc9d9f67c88.png"
+      return "https://cdn-icons-png.flaticon.com/512/4989/4989793.png"
     } else {
-      return "https://i.pinimg.com/564x/48/80/9b/48809b84353e9aebef7b6f3d7c3e1263.jpg"
+      return "https://cdn-icons-png.flaticon.com/512/5372/5372211.png"
     }
 
   }

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculo-imc.component.scss']
 })
 export class CalculoImcComponent {
-  public peso: number = 0;
-  public altura: number = 0;
-  public imc: number = 0;
+  public peso!: number;
+  public altura!: number;
+  public imc!: number;
   public sexo: string = '';
   public avaliacao: string = '';
 

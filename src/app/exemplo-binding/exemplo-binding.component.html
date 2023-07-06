@@ -1,11 +1,11 @@
-<div>
+<div class="container">
     <p>Valor de N!: {{n1}}</p>
     <p>Valor de N!: {{n2}}</p>
     <p>Soma de {{n1}} com {{n2}} = {{n1+n2}}</p>
-    <button [disabled]="n1==50" (click)="incrementa5()">Incrementa 5</button>
+    <button [disabled]="n1==50" (click)="incrementa5()">Incrementa 5</button><br>
     <button [disabled]="n1==0" (click)="decrementa5()">Decrementa 5</button>
     <div>
-        <img [src]="urlImg()" width="150px">
+        <img [src]="urlImg()" width="150px" class="imagem-avaliacao">
     </div>
     <div>
         <input type="text" id="txtTexto" [(ngModel)]="texto">
