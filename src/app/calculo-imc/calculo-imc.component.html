@@ -2,11 +2,25 @@
     <h1>Formulário IMC</h1>
     <label for="txtPeso">Peso: </label>
     <input type="number" id="txtPeso" [(ngModel)]="peso">
-    <h2>{{peso}}</h2>
+    <h2>{{ peso }}</h2>
     <label for="txtAltura">Altura: </label>
     <input type="number" id="txtAltura" [(ngModel)]="altura">
-    <h2>{{altura}}</h2>
-    <button [disabled]="isButtonDisabled()" (click)="calcularIMC()" title="Preencha todos os campos com um valor válido, para habilitar o botão">{{ isButtonDisabled() ? 'Desabilitado' :
-        'Calcular IMC' }}</button>
-    <h2>{{imc}}</h2>
+    <h2>{{ altura }}</h2>
+    <input type="radio" name="rSexo" id="radioMasc" value="masculino" [(ngModel)]="sexo">
+    <label class="radio-label" for="radioMasc">Masc</label>
+    <input type="radio" name="rSexo" id="radioFem" value="feminino" [(ngModel)]="sexo">
+    <label class="radio-label" for="radioFem">Fem</label>
+    <button [disabled]="isButtonDisabled()" (click)="calcularIMC()"
+        title="Preencha todos os campos com um valor válido parahabilitar o botão">{{ isButtonDisabled() ?
+        'Desabilitado' : 'Calcular IMC' }}</button>
+    <h2>{{ imc }}</h2>
+    <h2>Avaliação:</h2>
+    <div *ngIf="avaliacao !== ''">
+        <p>{{ avaliacao }}</p>
+        <img *ngIf="avaliacao === 'Abaixo do peso'" src="https://cdn-icons-png.flaticon.com/512/4989/4989793.png" class="imagem-avaliacao">
+        <img *ngIf="avaliacao === 'Peso normal'" src="https://cdn-icons-png.flaticon.com/512/5372/5372211.png" class="imagem-avaliacao">
+        <img *ngIf="avaliacao === 'Marginalmente acima do peso'" src="https://cdn-icons-png.flaticon.com/512/4989/4989793.png" class="imagem-avaliacao">
+        <img *ngIf="avaliacao === 'Acima do peso ideal'" src="https://cdn-icons-png.flaticon.com/512/4989/4989793.png" class="imagem-avaliacao">
+        <img *ngIf="avaliacao === 'Obeso'" src="https://cdn-icons-png.flaticon.com/512/4989/4989793.png" class="imagem-avaliacao">
+    </div>
 </div>
