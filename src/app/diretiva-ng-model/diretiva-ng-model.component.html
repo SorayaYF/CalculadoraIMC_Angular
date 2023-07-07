@@ -1,3 +1,16 @@
 <div class="container">
-    <p>diretiva-ng-model works!</p>
+    <p>Ng Model</p>
+</div>
+
+<h1>Exemplo ngModel</h1>
+<p>Digite um nome para exibir na lista</p>
+<p>Digite 'X' para ocultar a lista</p>
+
+<input type="text" [(ngModel)]="nome">
+<button (click)="adicionaNome()">ADICIONAR</button>
+<hr>
+<div *ngIf="nome != 'X'">
+    <ul>
+        <li *ngFor="let item of nomes">{{item.nome | uppercase}}</li>
+    </ul>
 </div>

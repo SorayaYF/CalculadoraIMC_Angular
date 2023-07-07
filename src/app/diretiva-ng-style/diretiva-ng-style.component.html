@@ -1,3 +1,13 @@
 <div class="container">
-    <p>diretiva-ng-style works!</p>
+    <p>Ng Style - Carrinho</p>
 </div>
+<br>
+<div class="corrida">
+    <div class="carro" [ngStyle]="{'width': larguraStr, 'left': posicaoStr}">
+        <img src="https://www.matrizesdebordados.com/image/cache/data/temas-infantis/meninos/carrinho-600x600.png"
+            alt="Carro">
+    </div>
+</div>
+<br>
+<button (click)="desacelerar()">Ir para atrás</button>
+<button (click)="acelerar()">Ir para frente</button>

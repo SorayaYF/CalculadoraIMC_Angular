@@ -1,4 +1,20 @@
-
 <div class="container">
-    <p>diretiva-ng-if works!</p>
+    <p>Ng If - Animais</p>
+</div>
+<div class="alinhamento">
+    <button (click)="mostrarAnimal('Gato')">Mostrar Gato</button>
+    <button (click)="mostrarAnimal('Cachorro')">Mostrar Cachorro</button>
+    <button (click)="mostrarAnimal('Coelho')">Mostrar Coelho</button>
+</div>
+<div class="alinhamento">
+    <h1 *ngIf="animalVisivel !== ''">{{ animalVisivel }} apareceu!</h1>
+</div>
+<div class="alinhamento">
+    <img *ngIf="animalVisivel === 'Gato'"
+        src="https://images.vexels.com/media/users/3/272729/isolated/lists/291eeb2eeadc7ead91451b2b213ce4a7-gato-simples-linear.png"
+        alt="Gato">
+    <img *ngIf="animalVisivel === 'Cachorro'"
+        src="https://prints.ultracoloringpages.com/7074d01062b1ce5fb03be0c14f35cfa1.png" alt="Cachorro">
+    <img *ngIf="animalVisivel === 'Coelho'"
+        src="https://prints.ultracoloringpages.com/57b513f7960239c8ca4218d4d3a66dd7.png" alt="Coelho">
 </div>

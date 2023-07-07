@@ -12,7 +12,4 @@ export class MenuComponent {
   toggleMenu() {
     this.showMenu = !this.showMenu;
   }
-
-  
-
 }

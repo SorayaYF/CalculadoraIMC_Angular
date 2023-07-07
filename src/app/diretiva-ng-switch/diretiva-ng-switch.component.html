@@ -1,3 +1,29 @@
 <div class="container">
-    <p>diretiva-ng-switch works!</p>
+    <p>Ng Switch - Informações sobre Países </p>
+</div>
+
+<select [(ngModel)]="paisSelecionado">
+  <option value="">Selecione um país</option>
+  <option *ngFor="let pais of listaPaises" [value]="pais">{{ pais }}</option>
+</select>
+
+<div [ngSwitch]="paisSelecionado">
+  <div *ngSwitchCase="'Brasil'">
+    <h3>Brasil</h3>
+    <p>Capital: Brasília</p>
+    <p>População: 211 milhões</p>
+  </div>
+  <div *ngSwitchCase="'Estados Unidos'">
+    <h3>Estados Unidos</h3>
+    <p>Capital: Washington, D.C.</p>
+    <p>População: 331 milhões</p>
+  </div>
+  <div *ngSwitchCase="'Japão'">
+    <h3>Japão</h3>
+    <p>Capital: Tóquio</p>
+    <p>População: 126 milhões</p>
+  </div>
+  <div *ngSwitchDefault>
+    <p>Selecione um país para ver as informações.</p>
+  </div>
 </div>

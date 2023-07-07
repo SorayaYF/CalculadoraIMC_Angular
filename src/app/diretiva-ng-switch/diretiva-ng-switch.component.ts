@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ng-switch.component.scss']
 })
 export class DiretivaNgSwitchComponent {
+  
+  public listaPaises: string[] = ['Brasil', 'Estados Unidos', 'Japão'];
+  public paisSelecionado: string = '';
+
+  constructor() { }
+
 
 }

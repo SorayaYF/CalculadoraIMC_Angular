@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgModelComponent {
 
+  public nome: string = "";
+  public nomes: Array<{ nome: string }> = [];
+
+  adicionaNome() {
+    if (this.nome != 'X') {
+      this.nomes.push({ nome: this.nome });
+      this.nome = "";
+    }
+  }
+
 }

@@ -1,3 +1,31 @@
 <div class="container">
-    <p>diretiva-ng-for works!</p>
+    <p>Ng If - Lista Filmes</p>
+</div>
+<br>
+<div class="alinhamento">
+    <input type="text" [(ngModel)]="nomeFilme" placeholder="Nome">
+    <input type="text" [(ngModel)]="classificacaoFilme" placeholder="Classificacao">
+</div>
+<br>
+<div class="alinhamento">
+    <table border="1" cellSpacing="0" width="30%">
+        <tr>
+            <td align="center"><b>Nome</b></td>
+            <td align="center"><b>Classificação</b></td>
+        </tr>
+        <tr *ngFor="let filmeDaLista of listaFilmes" (click)="clickFilme(filmeDaLista)">
+            <td>{{filmeDaLista.nome}}</td>
+            <td>{{filmeDaLista.classificacao}}</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="alinhamento">
+    <button (click)="addFilme()">Adicionar Filme</button>
+    <button (click)="removeFilme()">Remover Filme</button>
+</div>
+<div class="alinhamento">
+<div *ngIf="nomeSelecionado != ''">
+    <h2>{{nomeSelecionado}}, Possui classificação: {{classificacaoSelecionada}}</h2>
+</div>
 </div>

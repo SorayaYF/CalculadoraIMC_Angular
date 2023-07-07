@@ -16,6 +16,7 @@ import { DiretivaNgSwitchComponent } from './diretiva-ng-switch/diretiva-ng-swit
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { MenuComponent } from './menu/menu.component';
 import { MicroondasComponent } from './microondas/microondas.component';
+import { InvertePipe } from './inverte.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MicroondasComponent } from './microondas/microondas.component';
     DiretivaNgSwitchComponent,
     ExemploPipesComponent,
     MenuComponent,
-    MicroondasComponent
+    MicroondasComponent,
+    InvertePipe
   ],
   imports: [
     BrowserModule,

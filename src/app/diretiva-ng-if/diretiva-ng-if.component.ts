@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgIfComponent {
 
+  public animalVisivel: string = '';
+
+  mostrarAnimal(animal: string) {
+    if (this.animalVisivel === animal) {
+      this.animalVisivel = '';
+    } else {
+      this.animalVisivel = animal;
+    }
+  }
 }
