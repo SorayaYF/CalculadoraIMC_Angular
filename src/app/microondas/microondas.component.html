@@ -1,3 +1,43 @@
 <div class="container">
-    <p>microondas works!</p>
+    <p>Microondas</p>
 </div>
+
+<div class="microwave">
+  <div class="screen" [ngClass]="{ 'screen-on': isRunning }"></div>
+  <div class="display">
+    <div class="time">{{ currentTime }}</div>
+  </div>
+  <div class="buttons">
+    <div class="button-row">
+      <button class="button" (click)="addDigit(1)" [disabled]="isRunning">1</button>
+      <button class="button" (click)="addDigit(2)" [disabled]="isRunning">2</button>
+      <button class="button" (click)="addDigit(3)" [disabled]="isRunning">3</button>
+    </div>
+    <div class="button-row">
+      <button class="button" (click)="addDigit(4)" [disabled]="isRunning">4</button>
+      <button class="button" (click)="addDigit(5)" [disabled]="isRunning">5</button>
+      <button class="button" (click)="addDigit(6)" [disabled]="isRunning">6</button>
+    </div>
+    <div class="button-row">
+      <button class="button" (click)="addDigit(7)" [disabled]="isRunning">7</button>
+      <button class="button" (click)="addDigit(8)" [disabled]="isRunning">8</button>
+      <button class="button" (click)="addDigit(9)" [disabled]="isRunning">9</button>
+    </div>
+    <div class="button-row">
+      <button class="button" (click)="addDigit(0)" [disabled]="isRunning">0</button>
+    </div>
+    <div class="button-row">
+      <button class="button" (click)="add30Seconds()" [disabled]="isRunning">+30s</button>
+      <button class="button" (click)="add1Minute()" [disabled]="isRunning">+1m</button>
+      <button class="button" (click)="add10Minutes()" [disabled]="isRunning">+10m</button>
+    </div>
+    <div class="button-row">
+      <button class="button clear" (click)="clearInput()" [disabled]="isRunning">Clear</button>
+      <button class="button start" (click)="startMicrowave()" [disabled]="isRunning">Start</button>
+      <button class="button stop" (click)="stopMicrowave()" [disabled]="!isRunning">Stop</button>
+    </div>
+  </div>
+</div>
+
+
+  
