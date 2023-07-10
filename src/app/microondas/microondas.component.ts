@@ -61,11 +61,23 @@ export class MicroondasComponent {
       this.currentSeconds %= 60;
     }
     this.currentTime = `${this.formatTimeValue(this.currentMinutes)}:${this.formatTimeValue(this.currentSeconds)}`;
+
+    if (this.currentMinutes > 30 || (this.currentMinutes === 30 && this.currentSeconds > 0)) {
+      this.currentMinutes = 30;
+      this.currentSeconds = 0;
+      this.currentTime = `30:00`;
+    }
   }
 
   add1Minute() {
     this.currentMinutes++;
     this.currentTime = `${this.formatTimeValue(this.currentMinutes)}:${this.formatTimeValue(this.currentSeconds)}`;
+
+    if (this.currentMinutes > 30 || (this.currentMinutes === 30 && this.currentSeconds > 0)) {
+      this.currentMinutes = 30;
+      this.currentSeconds = 0;
+      this.currentTime = `30:00`;
+    }
   }
 
   add10Minutes() {
@@ -75,6 +87,12 @@ export class MicroondasComponent {
       this.currentSeconds = 0;
     }
     this.currentTime = `${this.formatTimeValue(this.currentMinutes)}:${this.formatTimeValue(this.currentSeconds)}`;
+
+    if (this.currentMinutes > 30 || (this.currentMinutes === 30 && this.currentSeconds > 0)) {
+      this.currentMinutes = 30;
+      this.currentSeconds = 0;
+      this.currentTime = `30:00`;
+    }
   }
 
   clearInput() {
