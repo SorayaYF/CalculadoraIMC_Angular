@@ -11,7 +11,7 @@
     </div>
     <br>
     <div class="alinhamento">
-        <button (click)="addItem(inputNome.value, inputValor.value)">Adiciona Item</button>
+        <button [disabled]="inputNome.value == null" (click)="addItem(inputNome.value, inputValor.value)">Adiciona Item</button>
     </div>
     <br>
     <div class="alinhamento">
