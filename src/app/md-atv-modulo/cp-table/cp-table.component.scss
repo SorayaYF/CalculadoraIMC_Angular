@@ -1,0 +1,21 @@
+.container {
+    background-color: rgb(254, 250, 224);
+    padding: 20px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2, h1{
+    color: rgb(40, 54, 24);
+}
+
+.alinhamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

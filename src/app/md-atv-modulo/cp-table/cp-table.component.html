@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="alinhamento">
+        <h1>Medicamentos</h1>
+    </div>
+    <ul>
+        <li *ngFor="let itemDaLista of lista">
+           <h2>Nome:{{itemDaLista.nome}} | Valor: R${{itemDaLista.valor}}</h2>
+        </li>
+    </ul>
+</div>

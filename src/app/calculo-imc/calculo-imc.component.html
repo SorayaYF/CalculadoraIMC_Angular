@@ -12,7 +12,7 @@
     <label class="radio-label" for="radioFem">Fem</label>
     <button [disabled]="isButtonDisabled()" (click)="calcularIMC()"
         title="Preencha todos os campos com um valor válido parahabilitar o botão">{{ isButtonDisabled() ?
-        'Desabilitado' : 'Calcular IMC' }}</button>
+        'Desabilitado' : 'Calcular IMC' }}</button> 
     <h2>{{ imc }}</h2>
     <h2>Avaliação:</h2>
     <div *ngIf="avaliacao !== ''">

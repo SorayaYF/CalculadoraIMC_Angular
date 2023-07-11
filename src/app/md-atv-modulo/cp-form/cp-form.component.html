@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="alinhamento">
+        <h1>Cadastro</h1>
+    </div>
+    <div class="alinhamento">
+        <input type="text" #inputNome>
+    </div>
+    <br>
+    <div class="alinhamento">
+        <input type="text" #inputValor>
+    </div>
+    <br>
+    <div class="alinhamento">
+        <button (click)="addItem(inputNome.value, inputValor.value)">Adiciona Item</button>
+    </div>
+    <br>
+    <div class="alinhamento">
+        <h2>{{qt}} medicamentos adicionados</h2>
+    </div>
+</div>

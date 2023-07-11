@@ -1,0 +1,22 @@
+.container {
+    background-color: rgb(40, 54, 24);
+    padding: 20px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(254, 250, 224);
+}
+
+.alinhamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
